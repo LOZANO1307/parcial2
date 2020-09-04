@@ -1,0 +1,148 @@
+<header>
+    <div class="row mr-5 ml-5">
+        <div class="col-md-6 p-5">
+            <a href="./"><button type="button" class="btn btn-primary btn-lg btn-block btn-danger">Pagina
+                    Principal</button></a>
+        </div>
+        <div class="col-md-6 p-5">
+            <button type="button" class="btn btn-primary btn-lg btn-block btn-success" data-toggle="modal"
+                data-target="#exampleModal">
+                Editar Informacion
+                Personal
+            </button>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2>Añadir Proyecto</h2>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Titulo</label>
+                    <input class="form-control form-control-lg" type="text"
+                        placeholder="escribe el titulo de tu proyecto" id="proyectoTitulo">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Descripcion</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="describe tu proyecto"
+                        id="proyectoDescripcion">
+                </div>
+                <div class="form-group mt-4">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Imagen</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="proyectoImg">
+                            <label class="custom-file-label" for="inputGroupFile02">seleciona un archivo local</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-button mt-5">
+                    <button type="submit" class="btn btn-primary btn-lg" onclick="añadirProyectos()">Añadir
+                        Proyecto</button>
+                </div>
+            </div>
+            <h2>Tus Proyectos:</h2>
+            <div id="proyectos"></div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="form-container">
+                <h2>Añadir Trabajo</h2>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Titulo</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="pon un titulo a tu trabajo"
+                        id="trabajoTitulo">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Descripcion</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="describe tu trabajo"
+                        id="trabajoDescripcion">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Link</label>
+                    <input class="form-control form-control-lg" type="text"
+                        placeholder="dejanos un link para ver tu trabajo" id="trabajoLink">
+                </div>
+                <div class="form-button mt-5">
+                    <button type="submit" class="btn btn-primary btn-lg" onclick="añadirTrabajos()">Añadir
+                        Trabajo</button>
+                </div>
+            </div>
+            <h2>Tus Trabajos:</h2>
+            <div id="trabajos"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Informacion Personal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Nombre</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="escribe tu nombre completo"
+                        id="inputLarge">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Edad</label>
+                    <input class="form-control form-control-lg" type="number" placeholder="¿cuantos años tienes?"
+                        id="inputLarge">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Sexo</label>
+                    <div class="form-group">
+                        <div class="row p-3">
+                            <div class="col-md-4 ml-5">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                        class="custom-control-input" checked="">
+                                    <label class="custom-control-label" for="customRadio1">Mujer</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ml-5">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio2">Hombre</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Profesión</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="¿a que te dedicas?"
+                        id="inputLarge">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Telefono</label>
+                    <input class="form-control form-control-lg" type="number" placeholder="tu numero de telefono"
+                        id="inputLarge">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Correo</label>
+                    <input class="form-control form-control-lg" type="email" placeholder="example@mail.com"
+                        id="inputLarge">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="inputLarge">Describete</label>
+                    <input class="form-control form-control-lg" type="email"
+                        placeholder="da una breve descripcion de ti" id="inputLarge">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <h2>@ 2020. Diseño y Desarrollo: Juan Camilo Lozano Claros </h2>
+</footer>
